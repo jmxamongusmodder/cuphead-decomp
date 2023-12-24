@@ -1,0 +1,63 @@
+public class FontLoader
+{
+	public enum FontType
+	{
+		None = 0,
+		CupheadFelix_Regular_merged = 1,
+		CupheadHenriette_A_merged = 2,
+		CupheadMemphis_Medium_merged = 3,
+		CupheadPoster_Regular66Cyr_Lat_English99 = 4,
+		CupheadVogue_Bold_merged = 5,
+		CupheadVogue_ExtraBold_merged = 6,
+		DFBrushRDStd_W7 = 7,
+		DFBrushSQStd_W5 = 8,
+		DSRefinedLetterB = 9,
+		FBBlue = 10,
+		hyk2gjm = 11,
+		jpchw00u = 12,
+		MComicPRC_Medium = 13,
+		YoonBackjaeM = 14,
+		rounded_mgenplus_1c_medium = 15,
+		hisikusa_A = 16,
+		FGPotego__2 = 17,
+		FGPotegoBold__2 = 18,
+		FGNewRetro = 19,
+		ElegantHeiseiMinchoMono_9W = 20,
+	}
+
+	public enum TMPFontType
+	{
+		None = 0,
+		CupheadFelix_Regular_merged__SDF = 1,
+		CupheadHenriette_A_merged__SDF = 2,
+		CupheadMemphis_Medium_merged__SDF = 3,
+		CupheadPoster_Regular66Cyr_Lat_English99__SDF = 4,
+		CupheadVogue_Bold_merged__SDF = 5,
+		CupheadVogue_ExtraBold_merged__outline__SDF = 6,
+		CupheadVogue_ExtraBold_merged__SDF = 7,
+		CupheadVogue_ExtraBold_merged__shadow__SDF = 8,
+		DFBrushRDStd_W7__outline__SDF = 9,
+		DFBrushRDStd_W7__SDF = 10,
+		DFBrushRDStd_W7__shadow__SDF = 11,
+		DFBrushSQStd_W5__SDF = 12,
+		DSRefinedLetterB__SDF = 13,
+		FBBlue__SDF = 14,
+		hyk2gjm__outline__SDF = 15,
+		hyk2gjm__SDF = 16,
+		hyk2gjm__shadow__SDF = 17,
+		jpchw00u__SDF = 18,
+		MComicPRC_Medium__SDF = 19,
+		YoonBackjaeM__outline__SDF = 20,
+		YoonBackjaeM__SDF = 21,
+		YoonBackjaeM__shadow__SDF = 22,
+		YoonBackjaeM__bold__SDF = 23,
+		rounded_mgenplus_1c_meduim__SDF = 24,
+		hisikusa_A__SDF = 25,
+		FGPotego__2__SDF = 26,
+		FGPotegoBold__2__SDF = 27,
+		FGNewRetro__SDF = 28,
+		ElegantHeiseiMinchoMono_9W__SDF = 29,
+		FGPotegoBold__2__outline__SDF = 30,
+	}
+
+}

@@ -10,7 +10,7 @@ THIS IS FOR EDUCATIONAL AND MOD MAKING PURPOSES.
 Currently none!
 
 # Not added/unfinished code/scenes
-Currently everything other then fonts.
+Currently only the scripts
 
 # To Do List
 This WILL be in projects not in the read me.

@@ -1,0 +1,3 @@
+public class PlayerDamageReceiver : DamageReceiver
+{
+}

@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1108124186542931}
+  m_IsPrefabParent: 1
+--- !u!1 &1108124186542931
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4580073644373225}
+  - component: {fileID: 114925599583620533}
+  m_Layer: 0
+  m_Name: Level_Weapon_Charge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4580073644373225
+Transform:
+  m_GameObject: {fileID: 1108124186542931}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 988.9134, y: 193.4516, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114925599583620533
+MonoBehaviour:
+  m_GameObject: {fileID: 1108124186542931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b65f6f2add4464d45965b73e149257fe, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  exPrefab: {fileID: 114806592822282058, guid: 8e251ce8a0765a240b37ba30048927f7, type: 2}
+  exEffectPrefab: {fileID: 0}
+  exFiringHitboxPrefab: {fileID: 0}
+  basicPrefab: {fileID: 114135697847122172, guid: 3bc3a613ba3ffb84d8de98d243a3b60f, type: 2}
+  basicEffectPrefab: {fileID: 114129441374522419, guid: 0c906fd9bd0349441adae7fefc9ffc18, type: 2}
+  basicFiringHitboxPrefab: {fileID: 114930410730736698, guid: 225157ddc5513044f9aa4467700846c5, type: 2}
+  chargeEffectPrefab: {fileID: 114997572666273208, guid: 1db8674b98824e640a6e3807cbeec7dc, type: 2}
+  fullChargeFx: {fileID: 114649371239696924, guid: c73cdf4017a038a45b58617fdf058fc2, type: 2}

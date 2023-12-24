@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1230364865373676}
+  m_IsPrefabParent: 1
+--- !u!1 &1230364865373676
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4075249303854088}
+  - component: {fileID: 114732282847806585}
+  m_Layer: 0
+  m_Name: Platforming_Level_Resources
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4075249303854088
+Transform:
+  m_GameObject: {fileID: 1230364865373676}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1399, y: -1262, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114732282847806585
+MonoBehaviour:
+  m_GameObject: {fileID: 1230364865373676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f18a6ef92e08d11488cf3c5a4a8db8ff, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  levelHUD: {fileID: 114565472381044381, guid: 2d3acf5323434b14fab887d3c40b194d, type: 2}
+  levelGUI: {fileID: 114460231164229681, guid: 26d61aae0defd974d8e117b8f5a5f8bf, type: 2}
+  levelAudio: {fileID: 114514462660664096, guid: 22e12f7dfd1e96f4abc6acfdee88ab7c, type: 2}
+  levelBossDeathExplosion: {fileID: 114683939462362009, guid: 8942577d091f299439467360aaa04744, type: 2}
+  levelPlayer: {fileID: 114493811805828604, guid: 2e68dbef0c306bf43b4d5db1bd9eff87, type: 2}
+  planePlayer: {fileID: 0}
+  joinEffect: {fileID: 114833707228778035, guid: 56154678ff26b1c4b8b852f6e3440651, type: 2}
+  platformingIntro: {fileID: 114873997913453017, guid: 948b0afd4eea1f747b9e2653807c5fde, type: 2}
+  platformingWin: {fileID: 114623136341128797, guid: ab1175c1f7345c849bbe66d675804cb3, type: 2}
+  levelIntro: {fileID: 0}
+  levelKO: {fileID: 0}
+  levelUIInteractionDialogue: {fileID: 114039403208328449, guid: ea6f9e7235300db499af00b232072b69, type: 2}

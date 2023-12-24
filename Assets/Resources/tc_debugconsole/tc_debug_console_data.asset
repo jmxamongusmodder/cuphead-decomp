@@ -1,0 +1,388 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26418160580d1d24a892d52d4d47e565, type: 3}
+  m_Name: tc_debug_console_data
+  m_EditorClassIdentifier:
+  index: 33
+  commands:
+  - command: console.test
+    key: 32
+    rewiredAction:
+    arguments:
+    - type: 0
+      name: intVal
+    - type: 3
+      name: stringVal
+    help: Use this command to test the console!
+    code: Debug.Log("console.test\n"+"int:"+intVal+" string:"+stringVal);
+    closeConsole: 0
+  - command: audio.bgm.disable
+    key: 260
+    rewiredAction:
+    arguments: []
+    help: Disable the BGM for the current level
+    code: AudioManager.StopBGM();
+    closeConsole: 0
+  - command: fps
+    key: 52
+    rewiredAction: Debug2
+    arguments: []
+    help: Toggle framerate counter
+    code: 'FramerateCounter.Init();
+
+    FramerateCounter.SHOW = !FramerateCounter.SHOW;'
+    closeConsole: 0
+  - command: gui.disable
+    key: 51
+    rewiredAction:
+    arguments: []
+    help: Disable the GUI of the current level
+    code: LevelGUI.DebugDisableGUI();
+    closeConsole: 0
+  - command: scene.load
+    key: 0
+    rewiredAction:
+    arguments:
+    - type: 3
+      name: s
+    help: Load a scene by name. Use scene.names to get all usable scene names
+    code: 'Scenes scene;
+
+    		if (!EnumUtils.TryParse<Scenes>(s, out scene))
+
+    		{
+
+    			DebugConsole.PrintError("Scene name \"" + s + " \" is not valid");
+
+    			return;
+
+    		}
+
+    
+
+    		if (s.Contains("level"))
+
+    		{
+
+    			for (int i = 0; i < LevelProperties.levels.Length; i++)
+
+    			{
+
+    				if (LevelProperties.levels[i] == s)
+
+    				{
+
+    					SceneLoader.LoadLevel((Levels)i, SceneLoader.Transition.Fade);
+
+    					DebugConsole.Hide();
+
+    					return;
+
+    				}
+
+    			}
+
+    		}
+
+    		else
+
+    		{
+
+    			SceneLoader.LoadScene(scene, SceneLoader.Transition.Fade, SceneLoader.Transition.Fade);
+
+    			DebugConsole.Hide();
+
+    		}'
+    closeConsole: 0
+  - command: scene.select
+    key: 48
+    rewiredAction:
+    arguments: []
+    help: Loads the Level Select menu
+    code: SceneLoader.LoadScene(Scenes.scene_menu, SceneLoader.Transition.Fade, SceneLoader.Transition.Fade);
+    closeConsole: 1
+  - command: scene.names
+    key: 0
+    rewiredAction:
+    arguments: []
+    help: Print out all scene names
+    code: 'DebugConsole.Break();
+
+    		DebugConsole.Print("Scene names:");
+
+    		DebugConsole.Line();
+
+    		foreach (string s in EnumUtils.GetValuesAsStrings<Scenes>())
+
+    		{
+
+    			DebugConsole.Print(s);
+
+    		}
+
+    		DebugConsole.Line();
+
+    		DebugConsole.Print("Use these scene names in conjunction with scene.load");
+
+    		DebugConsole.Break();'
+    closeConsole: 0
+  - command: scene.reset
+    key: 0
+    rewiredAction:
+    arguments: []
+    help: Reload the current scene
+    code: UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    closeConsole: 1
+  - command: player.invincible
+    key: 57
+    rewiredAction: Debug
+    arguments: []
+    help: Turn invincibility on or off
+    code: PlayerStatsManager.DebugToggleInvincible();
+    closeConsole: 1
+  - command: player.megaDamage
+    key: 56
+    rewiredAction:
+    arguments: []
+    help: Toggle doing 10x damage
+    code: DamageReceiver.Debug_ToggleMegaDamage();
+    closeConsole: 1
+  - command: player.multiplayer
+    key: 0
+    rewiredAction:
+    arguments:
+    - type: 2
+      name: b
+    help: Whether or not Player Two is enabled
+    code: PlayerManager.Multiplayer = b;
+    closeConsole: 1
+  - command: player.super.add
+    key: 50
+    rewiredAction:
+    arguments: []
+    help: Adds one Ex worth of Super to the Super bar
+    code: 'foreach (PlayerStatsManager stats in GameObject.FindObjectsOfType<PlayerStatsManager>()) 
+
+    		{
+
+    			stats.DebugAddSuper();
+
+    		}'
+    closeConsole: 1
+  - command: player.super.fill
+    key: 49
+    rewiredAction: Debug3
+    arguments: []
+    help: Fills the super meter of both players
+    code: 'foreach (PlayerStatsManager stats in GameObject.FindObjectsOfType<PlayerStatsManager>())
+
+    		{
+
+    			stats.DebugFillSuper();
+
+    		}'
+    closeConsole: 1
+  - command: show.sound.playing
+    key: 53
+    rewiredAction:
+    arguments: []
+    help: Shows what sound is playing in debug window
+    code: 'AudioManagerComponent.ShowAudioPlaying = true;
+
+    AudioManagerComponent.ShowAudioVariations = false;'
+    closeConsole: 0
+  - command: player.coin.add
+    key: 54
+    rewiredAction:
+    arguments: []
+    help:
+    code: "\r\n\t    if (PlayerData.Data.GetCurrency(PlayerId.PlayerOne) < 60) { PlayerData.Data.AddCurrency(PlayerId.PlayerOne, 1); }\r\n        if (PlayerData.Data.GetCurrency(PlayerId.PlayerTwo) < 60) { PlayerData.Data.AddCurrency(PlayerId.PlayerTwo, 1); }"
+    closeConsole: 0
+  - command: player.coin.remove
+    key: 55
+    rewiredAction:
+    arguments: []
+    help:
+    code: "\r\n        if (PlayerData.Data.GetCurrency(PlayerId.PlayerOne) > 0) { PlayerData.Data.AddCurrency(PlayerId.PlayerOne, -1); }\r\n        if (PlayerData.Data.GetCurrency(PlayerId.PlayerTwo) > 0) { PlayerData.Data.AddCurrency(PlayerId.PlayerTwo, -1); }"
+    closeConsole: 0
+  - command: player.more.pacific
+    key: 112
+    rewiredAction:
+    arguments: []
+    help:
+    code: "\r\n        for(int i = 0; i < Level.platformingLevels.Length; i++)\r\n        {\r\n            if(!PlayerData.Data.CheckLevelsHaveMinGrade(new Levels[] { Level.platformingLevels[i] }, LevelScoringData.Grade.P))\r\n            {\r\n                var data = PlayerData.Data.GetLevelData(Level.platformingLevels[i]);\r\n                data.grade = LevelScoringData.Grade.P;\r\n                data.completed = true;\r\r\n                data.played = true;\n                return;\r\n            }\r\n        }\r\n"
+    closeConsole: 0
+  - command: player.more.elite
+    key: 101
+    rewiredAction:
+    arguments: []
+    help:
+    code: "for (int i = 0; i < Level.world1BossLevels.Length; i++)\r\n        {\r\n            if (!PlayerData.Data.CheckLevelsHaveMinGrade(new Levels[] { Level.world1BossLevels[i] }, LevelScoringData.Grade.AMinus))\r\n            {\r\n                var data = PlayerData.Data.GetLevelData(Level.world1BossLevels[i]);\r\n                data.grade = LevelScoringData.Grade.AMinus;\r\n                data.completed = true;\r\n                data.played = true;\r\n                return;\r\n            }\r\n        }\r\n        for (int i = 0; i < Level.world2BossLevels.Length; i++)\r\n        {\r\n            if (!PlayerData.Data.CheckLevelsHaveMinGrade(new Levels[] { Level.world2BossLevels[i] }, LevelScoringData.Grade.AMinus))\r\n            {\r\n                var data = PlayerData.Data.GetLevelData(Level.world2BossLevels[i]);\r\n                data.grade = LevelScoringData.Grade.AMinus;\r\n                data.completed = true;\r\n                data.played = true;\r\n                return;\r\n            }\r\n        }\r\n        for (int i = 0; i < Level.world3BossLevels.Length; i++)\r\n        {\r\n            if (!PlayerData.Data.CheckLevelsHaveMinGrade(new Levels[] { Level.world3BossLevels[i] }, LevelScoringData.Grade.AMinus))\r\n            {\r\n                var data = PlayerData.Data.GetLevelData(Level.world3BossLevels[i]);\r\n                data.grade = LevelScoringData.Grade.AMinus;\r\n                data.completed = true;\r\n                data.played = true;\r\n                return;\r\n            }\r\n        }\r\n        for (int i = 0; i < Level.world4BossLevels.Length; i++)\r\n        {\r\n            if (!PlayerData.Data.CheckLevelsHaveMinGrade(new Levels[] { Level.world4BossLevels[i] }, LevelScoringData.Grade.AMinus))\r\n            {\r\n                var data = PlayerData.Data.GetLevelData(Level.world4BossLevels[i]);\r\n                data.grade = LevelScoringData.Grade.AMinus;\r\n                data.completed = true;\r\n                data.played = true;\r\n                return;\r\n            }\r\n        }\r\n        for (int i = 0; i < Level.world1BossLevels.Length; i++)\r\n        {\r\n            if (!PlayerData.Data.CheckLevelsHaveMinDifficulty(new Levels[] { Level.world1BossLevels[i] }, Level.Mode.Normal))\r\n            {\r\n                var data = PlayerData.Data.GetLevelData(Level.world1BossLevels[i]);\r\n                data.difficultyBeaten = Level.Mode.Normal;\r\n                return;\r\n            }\r\n        }\r\n        for (int i = 0; i < Level.world2BossLevels.Length; i++)\r\n        {\r\n            if (!PlayerData.Data.CheckLevelsHaveMinDifficulty(new Levels[] { Level.world2BossLevels[i] }, Level.Mode.Normal))\r\n            {\r\n                var data = PlayerData.Data.GetLevelData(Level.world2BossLevels[i]);\r\n                data.difficultyBeaten = Level.Mode.Normal;\r\n                return;\r\n            }\r\n        }\r\n        for (int i = 0; i < Level.world3BossLevels.Length; i++)\r\n        {\r\n            if (!PlayerData.Data.CheckLevelsHaveMinDifficulty(new Levels[] { Level.world3BossLevels[i] }, Level.Mode.Normal))\r\n            {\r\n                var data = PlayerData.Data.GetLevelData(Level.world3BossLevels[i]);\r\n                data.difficultyBeaten = Level.Mode.Normal;\r\n                return;\r\n            }\r\n        }\r\n        for (int i = 0; i < Level.world4BossLevels.Length; i++)\r\n        {\r\n            if (!PlayerData.Data.CheckLevelsHaveMinDifficulty(new Levels[] { Level.world4BossLevels[i] }, Level.Mode.Normal))\r\n            {\r\n                var data = PlayerData.Data.GetLevelData(Level.world4BossLevels[i]);\r\n                data.difficultyBeaten = Level.Mode.Normal;\r\n                return;\r\n            }\r\n        }\r\n        for (int i = 0; i < Level.world1BossLevels.Length; i++)\r\n        {\r\n            if (!PlayerData.Data.CheckLevelsHaveMinDifficulty(new Levels[] { Level.world1BossLevels[i] }, Level.Mode.Hard))\r\n            {\r\n                var data = PlayerData.Data.GetLevelData(Level.world1BossLevels[i]);\r\n                data.difficultyBeaten = Level.Mode.Hard;\r\n                return;\r\n            }\r\n        }\r\n        for (int i = 0; i < Level.world2BossLevels.Length; i++)\r\n        {\r\n            if (!PlayerData.Data.CheckLevelsHaveMinDifficulty(new Levels[] { Level.world2BossLevels[i] }, Level.Mode.Hard))\r\n            {\r\n                var data = PlayerData.Data.GetLevelData(Level.world2BossLevels[i]);\r\n                data.difficultyBeaten = Level.Mode.Hard;\r\n                return;\r\n            }\r\n        }\r\n        for (int i = 0; i < Level.world3BossLevels.Length; i++)\r\n        {\r\n            if (!PlayerData.Data.CheckLevelsHaveMinDifficulty(new Levels[] { Level.world3BossLevels[i] }, Level.Mode.Hard))\r\n            {\r\n                var data = PlayerData.Data.GetLevelData(Level.world3BossLevels[i]);\r\n                data.difficultyBeaten = Level.Mode.Hard;\r\n                return;\r\n            }\r\n        }\r\n        for (int i = 0; i < Level.world4BossLevels.Length; i++)\r\n        {\r\n            if (!PlayerData.Data.CheckLevelsHaveMinDifficulty(new Levels[] { Level.world4BossLevels[i] }, Level.Mode.Hard))\r\n            {\r\n                var data = PlayerData.Data.GetLevelData(Level.world4BossLevels[i]);\r\n                data.difficultyBeaten = Level.Mode.Hard;\r\n                return;\r\n            }\r\n        }"
+    closeConsole: 0
+  - command: level.win
+    key: 119
+    rewiredAction:
+    arguments: []
+    help:
+    code: Level.Current.CheatInstantWin();
+    closeConsole: 0
+  - command: gui.cycleDeathQuotes
+    key: 113
+    rewiredAction:
+    arguments: []
+    help:
+    code: "if(LevelGameOverGUI.Current != null)\n    LevelGameOverGUI.Current.CycleDeathQuotes();"
+    closeConsole: 0
+  - command: player.inventory.unlockAll
+    key: 105
+    rewiredAction:
+    arguments: []
+    help:
+    code: PlayerData.Data.UnlockAllItems();
+    closeConsole: 0
+  - command: level.unlockAllGates
+    key: 114
+    rewiredAction:
+    arguments: []
+    help:
+    code: MapLevelDependentObstacle.UnlockAll = !MapLevelDependentObstacle.UnlockAll;
+    closeConsole: 0
+  - command: kingDice.startFight
+    key: 100
+    rewiredAction:
+    arguments: []
+    help:
+    code: DicePalaceMainLevelKingDice.CheatsStartDiceFight();
+    closeConsole: 0
+  - command: stats.resetAchievements
+    key: 282
+    rewiredAction:
+    arguments: []
+    help:
+    code: "#if STEAM\n        Steamworks.SteamUserStats.ResetAllStats(true);\n#elif GOG\n        Galaxy.Api.GalaxyInstance.Stats().ResetStatsAndAchievements();\n#endif"
+    closeConsole: 0
+  - command: localization.importcsv
+    key: 285
+    rewiredAction:
+    arguments: []
+    help:
+    code: "string path = System.IO.Path.Combine(Application.dataPath, \"localization-cuphead.csv\");\r\n        if(System.IO.File.Exists(path))\n            Localization.ImportCsv(path);"
+    closeConsole: 0
+  - command: localization.goUp
+    key: 280
+    rewiredAction:
+    arguments: []
+    help:
+    code: Localization.CheatLocalization(true);
+    closeConsole: 0
+  - command: localization.goDown
+    key: 281
+    rewiredAction:
+    arguments: []
+    help:
+    code: Localization.CheatLocalization(false);
+    closeConsole: 0
+  - command: player.more.miniBoss
+    key: 109
+    rewiredAction:
+    arguments: []
+    help:
+    code: "for (int i = 0; i < Level.world4MiniBossLevels.Length; i++)\r\n        {\r\n            if (!PlayerData.Data.CheckLevelsHaveMinDifficulty(new Levels[] { Level.world4MiniBossLevels[i] }, Level.Mode.Hard))\r\n            {\r\n                var data = PlayerData.Data.GetLevelData(Level.world4MiniBossLevels[i]);\r\n                data.grade = LevelScoringData.Grade.AMinus;\r\n                data.completed = true;\r\n                data.played = true;\n            }\r\n        }"
+    closeConsole: 0
+  - command: add.SlotMachine.Token
+    key: 116
+    rewiredAction:
+    arguments: []
+    help:
+    code: TowerOfPowerLevelGameInfo.AddToken();
+    closeConsole: 0
+  - command: dialogue_screenshot
+    key: 0
+    rewiredAction:
+    arguments: []
+    help:
+    code: '#if DEBUG || CHEATS || EDITOR
+
+    				DebugScreenshot.AllLang = false;
+
+    		if (Input.GetKey(KeyCode.LeftShift))
+
+    			DebugScreenshot.AllLang = true;
+
+    
+
+    		SceneLoader.LoadScene("scene_map_world_1", SceneLoader.Transition.Iris, SceneLoader.Transition.Iris, SceneLoader.Icon.Hourglass);
+
+    		SceneLoader.OnLoaderCompleteEvent += DebugScreenshot.OnWorldLoaded;
+
+    
+
+    #endif'
+    closeConsole: 0
+  - command: difficulty.level.screenshot
+    key: 0
+    rewiredAction:
+    arguments: []
+    help:
+    code: '#if DEBUG || CHEATS || EDITOR
+
+    		DebugScreenshot.AllLang = false;
+
+    		if (Input.GetKey(KeyCode.LeftShift))
+
+    			DebugScreenshot.AllLang = true;
+
+    
+
+    SceneLoader.LoadScene("scene_map_world_1", SceneLoader.Transition.Iris, SceneLoader.Transition.Iris, SceneLoader.Icon.Hourglass);
+
+    SceneLoader.OnLoaderCompleteEvent += DebugScreenshot.OnWorldLoadedForBossCardScreenshot;
+
+    #endif'
+    closeConsole: 0
+  - command: contract.screenshot
+    key: 0
+    rewiredAction:
+    arguments: []
+    help:
+    code: '#if DEBUG || CHEATS || EDITOR
+
+    		DebugScreenshot.AllLang = false;
+
+    		if (Input.GetKey(KeyCode.LeftShift))
+
+    			DebugScreenshot.AllLang = true;
+
+    DebugScreenshot.ScreenShootcontract();
+
+    #endif'
+    closeConsole: 0
+  - command: level.nextState
+    key: 8
+    rewiredAction:
+    arguments: []
+    help:
+    code: '#if CHEATS || UNITY_EDITOR
+
+    	if(Level.Current != null)
+
+    	{
+
+    		Level.Current.DEBUG_DealDamageToEndState();
+
+    	}
+
+    #endif'
+    closeConsole: 0
+  - command: enemies.togglesuperhitslowdown
+    key: 93
+    rewiredAction:
+    arguments: []
+    help:
+    code: DamageReceiver.DEBUG_ToggleSuperHitSlowdown();
+    closeConsole: 0

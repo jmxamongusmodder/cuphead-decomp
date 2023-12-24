@@ -1,0 +1,3 @@
+public class BeeLevelGruntBriefcase : AbstractProjectile
+{
+}

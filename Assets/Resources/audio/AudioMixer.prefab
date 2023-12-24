@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1194414955985729}
+  m_IsPrefabParent: 1
+--- !u!1 &1194414955985729
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4368283817227050}
+  - component: {fileID: 114346164087746177}
+  m_Layer: 0
+  m_Name: AudioMixer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4368283817227050
+Transform:
+  m_GameObject: {fileID: 1194414955985729}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114346164087746177
+MonoBehaviour:
+  m_GameObject: {fileID: 1194414955985729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b4d4ac0d318218418c97158b55915f2, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mixer: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
+  audioGroups:
+    _master: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
+    _master_Options: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
+    _bgm_Options: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
+    _sfx_Options: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
+    _bgm: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
+    _levelBgm: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
+    _musicSting: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
+    _sfx: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
+    _levelSfx: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
+    _ambience: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
+    _creatures: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
+    _announcer: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
+    _super: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
+    _noise: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
+    _noiseConstant: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
+    _noiseShortterm: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
+    _noise1920s: {fileID: 0, guid: 0000000deadbeef15deadf00d0000000, type: 3}
