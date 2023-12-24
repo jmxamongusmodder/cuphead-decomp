@@ -1,0 +1,493 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461ea9a6b332fba4b944dabd3cc85848, type: 3}
+  m_Name: RuntimeSceneAtlasDatabase
+  m_EditorClassIdentifier:
+  INTERNAL_persistentAssetNames:
+  - Player
+  - PlayerPlane
+  - PlayerFX
+  - Explosion_Boss_Death
+  - Scene_Loader_Hourglass
+  - Equip_Icons
+  - Mugshots
+  - Achievements
+  - JumpDust
+  - Player_Replace
+  - Equip_Titles
+  INTERNAL_persistentAssetNamesDLC:
+  - Chalice
+  - ChalicePlane
+  - Equip_Icons_DLC
+  - Mugshots_DLC
+  - WeaponCharms_DLC
+  - Achievements_DLC
+  INTERNAL_sceneAssetMappings:
+  - sceneName: scene_title
+    assetNames:
+    - Title
+    - Title_Assets
+    - mdhr_logo
+    - TitleScreen_DLC
+  - sceneName: scene_slot_select
+    assetNames:
+    - UpsellDLC
+  - sceneName: scene_map_world_1
+    assetNames:
+    - Big_Cloud_FX
+    - Map_Common
+    - Map_Event
+    - Map_Player
+    - World_1
+    - World_1_Common
+    - World_2_Common
+    - World_2_Common2
+    - TitleCards_W1
+    - GameDjimmi
+    - Map_Common_DLC
+    - Map_Player_DLC
+  - sceneName: scene_map_world_2
+    assetNames:
+    - Map_Common
+    - World_2
+    - World_2_Common2
+    - World_3_Common
+    - TitleCards_W2
+    - Big_Cloud_FX
+    - Map_Event
+    - Map_Player
+    - World_1_Common
+    - World_2_Common
+    - GameDjimmi
+    - Map_Common_DLC
+    - Map_Player_DLC
+  - sceneName: scene_map_world_3
+    assetNames:
+    - World_3
+    - TitleCards_W3
+    - Big_Cloud_FX
+    - Map_Common
+    - Map_Event
+    - Map_Player
+    - World_2_Common2
+    - World_3_Common
+    - GameDjimmi
+    - Map_Common_DLC
+    - Map_Player_DLC
+  - sceneName: scene_map_world_4
+    assetNames:
+    - World_4
+    - World_4_SpotlightsBack
+    - World_4_SpotlightsFront
+    - TitleCards_W4
+    - Big_Cloud_FX
+    - Map_Common
+    - Map_Event
+    - Map_Player
+    - GameDjimmi
+    - Map_Common_DLC
+    - Map_Player_DLC
+  - sceneName: scene_level_tutorial
+    assetNames:
+    - JumpDust
+    - Level_Tutorial
+    - PlatformingExplosions
+    - level_coin
+  - sceneName: scene_level_pirate
+    assetNames:
+    - PirateLevel
+    - SquidFX
+  - sceneName: scene_level_flower
+    assetNames:
+    - BlimpBulletSmoke
+    - FlowerLevel
+  - sceneName: scene_level_train
+    assetNames:
+    - SquidFX
+    - TrainCannonFX
+    - TrainFireballSmokePuff
+    - TrainLevel
+    - TrainLevelBG
+  - sceneName: scene_level_veggies
+    assetNames:
+    - VeggiesLevel
+    - VeggiesLevel_BG
+    - Merdusa_Pufferfish_Deathpoof
+  - sceneName: scene_level_frogs
+    assetNames:
+    - FrogsLevel
+  - sceneName: scene_level_bee
+    assetNames:
+    - BeeLevel
+  - sceneName: scene_level_mouse
+    assetNames:
+    - Big_Cloud_FX
+    - Explosion_Small
+    - MouseLevel
+  - sceneName: scene_level_dragon
+    assetNames:
+    - Cigar_Fire_Bullet
+    - DragonLevel_BG
+    - DragonLevel_NoBG
+    - DragonLevel_Rain
+  - sceneName: scene_level_flying_bird
+    assetNames:
+    - BlimpBulletSmoke
+    - BlimpEnemyBullet
+    - FlyingBirdLevel
+  - sceneName: scene_level_flying_mermaid
+    assetNames:
+    - FlyingMermaidLevel
+    - FlyingMermaidLevel_HQ
+    - Megasplash_Large
+    - Merdusa_Pufferfish_Deathpoof
+  - sceneName: scene_level_flying_blimp
+    assetNames:
+    - Big_Cloud_FX
+    - BlimpBulletSmoke
+    - BlimpEnemyBullet
+    - FlyingBlimpLevel
+  - sceneName: scene_level_slime
+    assetNames:
+    - JumpDust
+    - LightRay
+    - SlimeLevel
+  - sceneName: scene_level_baroness
+    assetNames:
+    - BaronessLevel
+    - Explosion_Small
+  - sceneName: scene_level_robot
+    assetNames:
+    - Explosion_Small
+    - RobotLevel
+    - RobotLevel_HQ
+  - sceneName: scene_level_clown
+    assetNames:
+    - ClownLevel
+    - JumpDust
+    - PinkHorseShoeSparkles
+  - sceneName: scene_level_sally_stage_play
+    assetNames:
+    - SallyStagePlayLevel
+    - SallyStagePlayLevel_BG
+    - SallyStagePlayLevel_Masks
+  - sceneName: scene_level_dice_palace_domino
+    assetNames:
+    - DiceDominoLevel
+    - Explosion_Small
+  - sceneName: scene_level_dice_palace_chips
+    assetNames:
+    - DiceChipsLevel
+    - DiceCigarLevelSmoke
+    - BG_Smoke
+  - sceneName: scene_level_dice_palace_cigar
+    assetNames:
+    - Cigar_Fire_Bullet
+    - DiceCigarLevel
+  - sceneName: scene_level_dice_palace_booze
+    assetNames:
+    - DiceBoozeLevel
+  - sceneName: scene_level_dice_palace_roulette
+    assetNames:
+    - DiceRouletteLevel
+  - sceneName: scene_level_dice_palace_rabbit
+    assetNames:
+    - DiceRabbitLevel
+  - sceneName: scene_level_flying_genie
+    assetNames:
+    - BlimpEnemyBullet
+    - FlyingGenieLevel_BG
+    - FlyingGenieLevel_NoBG
+    - FlyingGenieLevel_HQ
+  - sceneName: scene_shop
+    assetNames:
+    - JumpDust
+    - Shop
+    - Shop_DLC
+  - sceneName: scene_level_dice_palace_flying_horse
+    assetNames:
+    - DiceFlyingHorseLevel
+  - sceneName: scene_level_dice_palace_flying_memory
+    assetNames:
+    - DiceFlyingMemoryLevel
+  - sceneName: scene_level_dice_palace_eight_ball
+    assetNames:
+    - DiceEightBallLevel
+    - JumpDust
+  - sceneName: scene_level_dice_palace_main
+    assetNames:
+    - DiceKingMainLevel
+    - KingDiceCardHearts
+  - sceneName: scene_level_devil
+    assetNames:
+    - DevilLevelBG
+    - DevilLevelP1
+    - DevilLevelP3
+    - Explosion_Small
+    - PinkHorseShoeSparkles
+    - PlatformingExplosions
+    - TrainCannonFX
+    - JumpDust
+    - SallyStagePlayLevel_Masks
+    - BG_Devil_Smoke
+  - sceneName: scene_win
+    assetNames:
+    - win_screen
+    - win_screen_loc
+    - WinScreen_DLC
+  - sceneName: scene_level_mausoleum
+    assetNames:
+    - JumpDust
+    - MausoleumLevel
+    - Magician_Sparkles
+  - sceneName: scene_level_house_elder_kettle
+    assetNames:
+    - ElderKettle
+  - sceneName: scene_level_platforming_1_1F
+    assetNames:
+    - Forest_Common
+    - LightRay
+    - MG_LogGrass0001
+    - PlatformingExit
+    - PlatformingExplosions
+    - PlatformingForestLevel
+    - Propellor
+    - level_coin
+  - sceneName: scene_level_platforming_1_2F
+    assetNames:
+    - Cigar_Fire_Bullet
+    - Forest_Common
+    - PlatformingTreeLevel
+    - level_coin
+    - PlatformingExplosions
+    - Propellor
+    - LightRay
+    - PlatformingExit
+  - sceneName: scene_level_platforming_2_1F
+    assetNames:
+    - BlimpEnemyBullet
+    - PlatformingCircusLevel
+    - PlatformingExplosions
+    - Magician_Sparkles
+    - level_coin
+    - PlatformingExit
+  - sceneName: scene_level_platforming_2_2F
+    assetNames:
+    - BlimpEnemyBullet
+    - PlatformingFunhouseLevel
+    - level_coin
+    - PlatformingExplosions
+    - PlatformingExit
+  - sceneName: scene_level_platforming_3_1F
+    assetNames:
+    - Megasplash_Large
+    - PlatformingExplosions
+    - PlatformingHarborLevel
+    - level_coin
+    - PlatformingExit
+  - sceneName: scene_level_platforming_3_2F
+    assetNames:
+    - PlatformingMountainLevel
+    - Propellor
+    - SquidFX
+    - TrainFireballSmokePuff
+    - MG_LogGrass0001
+    - level_coin
+    - PlatformingExplosions
+    - PlatformingExit
+  - sceneName: scene_level_dice_gate
+    assetNames:
+    - DiceHouse
+  - sceneName: scene_cutscene_kingdice
+    assetNames:
+    - King_Dice_Cutscene
+  - sceneName: scene_cutscene_intro
+    assetNames:
+    - BookIntro
+    - BookIntroLOC
+    - BookP1
+    - BookP10
+    - BookP10LOC
+    - BookP1LOC
+    - BookP2
+    - BookP2LOC
+    - BookP3
+    - BookP3LOC
+    - BookP4
+    - BookP4LOC
+    - BookP5
+    - BookP5LOC
+    - BookP6
+    - BookP6LOC
+    - BookP7
+    - BookP7LOC
+    - BookP8
+    - BookP8LOC
+    - BookP9
+    - BookP9LOC
+    - BookIntroHoldFrames
+    - BookIntroHoldFrames_LOC
+  - sceneName: scene_cutscene_devil
+    assetNames:
+    - Bad_Ending
+    - Cutscene_Devil
+    - BG_Devil_Smoke
+    - Bad_Ending_DLC
+  - sceneName: scene_level_shmup_tutorial
+    assetNames:
+    - Shmup_Tutorial
+  - sceneName: scene_cutscene_outro
+    assetNames:
+    - BookOutro
+    - BookOutroLOC
+    - BookP12
+    - BookP12ALOC
+    - BookP12B
+    - BookP12LOC
+    - BookP13
+    - BookP13LOC
+    - BookP14
+    - BookP14LOC
+    - BookP15
+    - BookP15LOC
+    - BookP16
+    - BookP16LOC
+    - BookOutroHoldFrames
+    - BookOutroHoldFrames_LOC
+  - sceneName: scene_cutscene_credits
+    assetNames: []
+  - sceneName: scene_cutscene_world2
+    assetNames:
+    - World_2_Cutscene
+  - sceneName: scene_cutscene_world3
+    assetNames:
+    - World_3_Cutscene
+    - BG_Smoke
+  - sceneName: scene_level_rum_runners
+    assetNames:
+    - RumRunners_Background
+    - RumRunners_Phase1
+    - RumRunners_Phase2
+    - RumRunners_Phase3
+  - sceneName: scene_level_old_man
+    assetNames:
+    - OldMan_Background
+    - OldMan_BackgroundStomach
+    - OldMan_Phase1
+    - OldMan_Phase2
+    - OldMan_Phase3
+  - sceneName: scene_level_flying_cowboy
+    assetNames:
+    - Cowgirl_Background
+    - Cowgirl_Phase1
+    - Cowgirl_Phase1_Cactus
+    - Cowgirl_Phase2
+    - Cowgirl_Phase3
+    - Cowgirl_Phase4
+    - PlayerPlaneDust
+  - sceneName: scene_level_airplane
+    assetNames:
+    - Dogfight_Background
+    - Dogfight_Phase1
+    - Dogfight_Phase2
+    - Dogfight_Phase3
+  - sceneName: scene_level_snow_cult
+    assetNames:
+    - SnowCult_Background
+    - SnowCult_Phase1
+    - SnowCult_Phase2
+    - SnowCult_Phase3
+  - sceneName: scene_level_saltbaker
+    assetNames:
+    - Saltbaker_Background_Phase1
+    - Saltbaker_Background_Phase3
+    - Saltbaker_Phase1_Dough
+    - Saltbaker_Phase1_DoughSmall
+    - Saltbaker_Phase1_End
+    - Saltbaker_Phase1_IntroIdle
+    - Saltbaker_Phase1_Lime
+    - Saltbaker_Phase1_LimeSmall
+    - Saltbaker_Phase1_Small
+    - Saltbaker_Phase1_Strawberries
+    - Saltbaker_Phase1_Sugar
+    - Saltbaker_Phase2_Death
+    - Saltbaker_Phase2_Saltbaker
+    - Saltbaker_Phase2_Small
+    - Saltbaker_Phase3
+    - Saltbaker_Phase4
+  - sceneName: scene_level_graveyard
+    assetNames:
+    - Graveyard_Angel
+    - Graveyard_AngelToDevil
+    - Graveyard_Devil
+    - Graveyard_DevilToAngel
+    - Graveyard
+    - DevilLevelBG
+  - sceneName: scene_level_chess_castle
+    assetNames:
+    - Castle_Background
+    - Castle_King
+    - level_coin
+  - sceneName: scene_level_chess_pawn
+    assetNames:
+    - Pawn
+    - Pawn_Background
+  - sceneName: scene_level_chess_knight
+    assetNames:
+    - Knight
+    - Knight_Background
+  - sceneName: scene_level_chess_bishop
+    assetNames:
+    - Bishop
+    - Bishop_Background
+  - sceneName: scene_level_chess_rook
+    assetNames:
+    - Rook
+    - Rook_Background
+  - sceneName: scene_level_chess_queen
+    assetNames:
+    - Queen
+    - Queen_Background
+  - sceneName: scene_map_world_DLC
+    assetNames:
+    - World_DLC
+    - MapEvent_DLC
+    - Map_Common_DLC
+    - TitleCards_WDLC
+    - Map_Player_DLC
+    - Map_Common
+    - Map_Event
+    - Map_Player
+    - Big_Cloud_FX
+    - GameDjimmi
+  - sceneName: scene_cutscene_dlc_intro
+    assetNames:
+    - CutsceneDLCIntro
+  - sceneName: scene_cutscene_dlc_saltbaker_prebattle
+    assetNames:
+    - CutsceneDLCPreSaltbaker
+  - sceneName: scene_cutscene_dlc_ending
+    assetNames:
+    - CutsceneDLCEnding
+  - sceneName: scene_shop_DLC
+    assetNames:
+    - Shop_DLC
+    - Shop
+    - JumpDust
+  - sceneName: scene_level_kitchen
+    assetNames:
+    - Bakery
+  - sceneName: scene_level_chalice_tutorial
+    assetNames:
+    - ChaliceTutorial
+    - level_coin
+  - sceneName: scene_cutscene_dlc_credits_comic
+    assetNames:
+    - CutsceneDLCCreditsComic
+  - sceneName: scene_cutscene_dlc_credits
+    assetNames: []
