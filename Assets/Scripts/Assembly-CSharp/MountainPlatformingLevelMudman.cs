@@ -95,7 +95,7 @@ public class MountainPlatformingLevelMudman : PlatformingLevelGroundMovementEnem
 		base.FrameDelayedCallback(delegate
 		{
 			this.otherExplosion.Create(base.GetComponent<Collider2D>().bounds.center);
-			this.<Die>__BaseCallProxy0();
+			this.Delete();
 		}, 1);
 		base.StartCoroutine(this.explode_cr());
 		if (this.isBig)
